@@ -1,0 +1,10 @@
+import web3 from './web3';
+
+const address='0xB1EF71A9F63D640572e9F985E0f2FFF9C4622AF6';
+
+const abi=[{"constant":true,"inputs":[{"name":"patient_id","type":"string"}],"name":"getPreviousDates","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"patient_id","type":"string"}],"name":"getBloodTest","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"manager","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":
+"function"},{"constant":true,"inputs":[],"name":"prevRecords","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"patient_id","type":"string"},{"name":"bloodTest","type":"string"},{"name":"urineTest","type":"string"},{"name":"ECG","type":"string"},{"name":"BP","type":"string"}],"name":"addReport","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"patient_id","type":"string"}],"name":"getBloodPressure","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"numReports","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"patient_id","type":
+"string"}],"name":"getUrineTest","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"patient_id","type":"string"},{"name":"_previous","type":"string"}],"name":"addPreviousDates","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"patient_id","type":"string"}],"name":"getBloodECG","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type"
+:"function"},{"inputs":[],"payable":false,"stateMutability":"nonpayable","type":"constructor"}];
+
+export default new web3.eth.Contract(abi,address);

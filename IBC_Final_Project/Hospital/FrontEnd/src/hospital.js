@@ -1,0 +1,8 @@
+import web3 from './web3';
+
+const address='0x822e3917B37f8c44B3CE24BBE8b4CbE6BE34F252';
+
+const abi=[{"constant":true,"inputs":[],"name":"numHospitals","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"h_id","type":"string"}],"name":"getName","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"h_id","type":"string"}],"name":"getH_Address","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"h_id","type":"string"}],"name":"getType","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"}
+,{"constant":false,"inputs":[{"name":"h_id","type":"string"},{"name":"h_name","type":"string"},{"name":"h_type","type":"string"},{"name":"h_address","type":"string"},{"name":"p_number","type":"string"}],"name":"addHospital","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"healthDept","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"h_id","type":"string"}],"name":"getNumber","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[],"payable":false,"stateMutability":"nonpayable","type":"constructor"}];
+
+export default new web3.eth.Contract(abi,address);
